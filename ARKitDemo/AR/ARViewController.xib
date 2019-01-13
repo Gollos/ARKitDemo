@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ARViewController" customModule="ARKitDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="sceneView" destination="kzV-GY-GO1" id="dIa-EE-0ez"/>
+                <outlet property="view" destination="foG-3K-ZlH" id="ZhX-C9-iBQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="foG-3K-ZlH">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kzV-GY-GO1">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </arscnView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFb-l6-HH3">
+                    <rect key="frame" x="25" y="25" width="40" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="K9u-he-6ku"/>
+                        <constraint firstAttribute="height" constant="40" id="MY6-t0-jIz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <state key="normal" title="+">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="addButtonPressed:" destination="-1" eventType="touchUpInside" id="Cdg-Ox-199"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="kzV-GY-GO1" firstAttribute="leading" secondItem="foG-3K-ZlH" secondAttribute="leading" id="624-ne-kZL"/>
+                <constraint firstAttribute="bottom" secondItem="kzV-GY-GO1" secondAttribute="bottom" id="88w-wq-gJh"/>
+                <constraint firstAttribute="trailing" secondItem="kzV-GY-GO1" secondAttribute="trailing" id="I81-g2-o7g"/>
+                <constraint firstItem="fFb-l6-HH3" firstAttribute="leading" secondItem="kzV-GY-GO1" secondAttribute="leading" constant="25" id="OuP-ZT-GO3"/>
+                <constraint firstItem="kzV-GY-GO1" firstAttribute="top" secondItem="foG-3K-ZlH" secondAttribute="top" id="eAZ-Ix-Sf7"/>
+                <constraint firstItem="fFb-l6-HH3" firstAttribute="top" secondItem="kzV-GY-GO1" secondAttribute="top" constant="25" id="fs2-Vx-1vN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="QQf-Pi-DBM"/>
+            <point key="canvasLocation" x="-670" y="-162"/>
+        </view>
+    </objects>
+</document>
