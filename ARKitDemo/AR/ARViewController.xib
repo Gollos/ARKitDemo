@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ARViewController" customModule="ARKitDemo" customModuleProvider="target">
             <connections>
+                <outlet property="addButton" destination="fFb-l6-HH3" id="n2P-qW-I9C"/>
                 <outlet property="sceneView" destination="kzV-GY-GO1" id="dIa-EE-0ez"/>
                 <outlet property="view" destination="foG-3K-ZlH" id="ZhX-C9-iBQ"/>
             </connections>
