@@ -18,7 +18,7 @@ var mainStore: Store<AppState>! {
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    private(set) var store: Store<AppState>!
+    fileprivate var store: Store<AppState>!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         store = createStore()

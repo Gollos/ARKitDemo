@@ -13,13 +13,12 @@
 		CD0B4A8A21EA96E90057B884 /* ARKitReduxState.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD0B4A8321EA96E80057B884 /* ARKitReduxState.framework */; };
 		CD0B4A8B21EA96E90057B884 /* ARKitReduxState.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD0B4A8321EA96E80057B884 /* ARKitReduxState.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CD0B4A9221EA973C0057B884 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B4A9121EA973C0057B884 /* AppState.swift */; };
-		CD0B4A9521EA9E890057B884 /* PockemonLens.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B4A9421EA9E890057B884 /* PockemonLens.swift */; };
-		CD0B4A9721EA9F330057B884 /* Lens.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B4A9621EA9F330057B884 /* Lens.swift */; };
-		CD0B4A9921EA9FD10057B884 /* ViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B4A9821EA9FD10057B884 /* ViewControllerModel.swift */; };
-		CD0B4A9C21EAA0890057B884 /* PockemonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B4A9B21EAA0890057B884 /* PockemonState.swift */; };
-		CD0B4A9F21EAA3040057B884 /* ErrorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B4A9E21EAA3040057B884 /* ErrorState.swift */; };
 		CD0B4AA221EAA9C40057B884 /* ARViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD0B4AA121EAA9C40057B884 /* ARViewController.xib */; };
-		CD0B4AA521EAAA720057B884 /* ErrorHandlerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0B4AA421EAAA720057B884 /* ErrorHandlerController.swift */; };
+		CD11E91721F3D5EF00AC0889 /* PockemonReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11E91621F3D5EF00AC0889 /* PockemonReducer.swift */; };
+		CD11E91A21F3D60E00AC0889 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11E91921F3D60E00AC0889 /* AppReducer.swift */; };
+		CD11E91D21F3D75700AC0889 /* PockemonActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11E91C21F3D75700AC0889 /* PockemonActions.swift */; };
+		CD11E92021F3D9BB00AC0889 /* PockemonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11E91F21F3D9BB00AC0889 /* PockemonState.swift */; };
+		CD11E92521F3DF7C00AC0889 /* SCNVector3+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11E92421F3DF7C00AC0889 /* SCNVector3+Identifier.swift */; };
 		CDF172AD21EA31B20020E7AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF172AC21EA31B20020E7AA /* AppDelegate.swift */; };
 		CDF172AF21EA31B20020E7AA /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF172AE21EA31B20020E7AA /* art.scnassets */; };
 		CDF172B121EA31B20020E7AA /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF172B021EA31B20020E7AA /* ARViewController.swift */; };
@@ -62,13 +61,12 @@
 		CD0B4A8521EA96E90057B884 /* ARKitReduxState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARKitReduxState.h; sourceTree = "<group>"; };
 		CD0B4A8621EA96E90057B884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD0B4A9121EA973C0057B884 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		CD0B4A9421EA9E890057B884 /* PockemonLens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PockemonLens.swift; sourceTree = "<group>"; };
-		CD0B4A9621EA9F330057B884 /* Lens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lens.swift; sourceTree = "<group>"; };
-		CD0B4A9821EA9FD10057B884 /* ViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerModel.swift; sourceTree = "<group>"; };
-		CD0B4A9B21EAA0890057B884 /* PockemonState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PockemonState.swift; sourceTree = "<group>"; };
-		CD0B4A9E21EAA3040057B884 /* ErrorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorState.swift; sourceTree = "<group>"; };
 		CD0B4AA121EAA9C40057B884 /* ARViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ARViewController.xib; sourceTree = "<group>"; };
-		CD0B4AA421EAAA720057B884 /* ErrorHandlerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlerController.swift; sourceTree = "<group>"; };
+		CD11E91621F3D5EF00AC0889 /* PockemonReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PockemonReducer.swift; sourceTree = "<group>"; };
+		CD11E91921F3D60E00AC0889 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		CD11E91C21F3D75700AC0889 /* PockemonActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PockemonActions.swift; sourceTree = "<group>"; };
+		CD11E91F21F3D9BB00AC0889 /* PockemonState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PockemonState.swift; sourceTree = "<group>"; };
+		CD11E92421F3DF7C00AC0889 /* SCNVector3+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Identifier.swift"; sourceTree = "<group>"; };
 		CDF172A921EA31B20020E7AA /* ARKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF172AC21EA31B20020E7AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDF172AE21EA31B20020E7AA /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -122,70 +120,12 @@
 		CD0B4A8421EA96E90057B884 /* ARKitReduxState */ = {
 			isa = PBXGroup;
 			children = (
-				CD0B4A9021EA972D0057B884 /* Core */,
-				CD0B4A9A21EAA0770057B884 /* Flows */,
+				CD11E91B21F3D6FD00AC0889 /* Actions */,
+				CD11E91821F3D5FF00AC0889 /* State */,
+				CD11E91521F3D5D600AC0889 /* Reducers */,
 				CD0B4AA921EAAB180057B884 /* Supporing Files */,
 			);
 			path = ARKitReduxState;
-			sourceTree = "<group>";
-		};
-		CD0B4A9021EA972D0057B884 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				CD0B4A9121EA973C0057B884 /* AppState.swift */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		CD0B4A9321EA9E770057B884 /* ARFlow */ = {
-			isa = PBXGroup;
-			children = (
-				CD0B4A9421EA9E890057B884 /* PockemonLens.swift */,
-			);
-			path = ARFlow;
-			sourceTree = "<group>";
-		};
-		CD0B4A9A21EAA0770057B884 /* Flows */ = {
-			isa = PBXGroup;
-			children = (
-				CD0B4AA021EAA9620057B884 /* Pockemon */,
-				CD0B4A9D21EAA2EA0057B884 /* Error */,
-			);
-			path = Flows;
-			sourceTree = "<group>";
-		};
-		CD0B4A9D21EAA2EA0057B884 /* Error */ = {
-			isa = PBXGroup;
-			children = (
-				CD0B4A9E21EAA3040057B884 /* ErrorState.swift */,
-			);
-			path = Error;
-			sourceTree = "<group>";
-		};
-		CD0B4AA021EAA9620057B884 /* Pockemon */ = {
-			isa = PBXGroup;
-			children = (
-				CD0B4A9B21EAA0890057B884 /* PockemonState.swift */,
-			);
-			path = Pockemon;
-			sourceTree = "<group>";
-		};
-		CD0B4AA321EAAA650057B884 /* Error */ = {
-			isa = PBXGroup;
-			children = (
-				CD0B4AA421EAAA720057B884 /* ErrorHandlerController.swift */,
-			);
-			path = Error;
-			sourceTree = "<group>";
-		};
-		CD0B4AA621EAAAAD0057B884 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				CD0B4A9821EA9FD10057B884 /* ViewControllerModel.swift */,
-				CD0B4A9621EA9F330057B884 /* Lens.swift */,
-				CD0B4AA321EAAA650057B884 /* Error */,
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 		CD0B4AA721EAAAC40057B884 /* Supporting Files */ = {
@@ -200,15 +140,6 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CD0B4AA821EAAADE0057B884 /* AR */ = {
-			isa = PBXGroup;
-			children = (
-				CDF172B021EA31B20020E7AA /* ARViewController.swift */,
-				CD0B4AA121EAA9C40057B884 /* ARViewController.xib */,
-			);
-			path = AR;
-			sourceTree = "<group>";
-		};
 		CD0B4AA921EAAB180057B884 /* Supporing Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +147,49 @@
 				CD0B4A8621EA96E90057B884 /* Info.plist */,
 			);
 			path = "Supporing Files";
+			sourceTree = "<group>";
+		};
+		CD11E91521F3D5D600AC0889 /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				CD11E91921F3D60E00AC0889 /* AppReducer.swift */,
+				CD11E91621F3D5EF00AC0889 /* PockemonReducer.swift */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		CD11E91821F3D5FF00AC0889 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				CD0B4A9121EA973C0057B884 /* AppState.swift */,
+				CD11E91F21F3D9BB00AC0889 /* PockemonState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		CD11E91B21F3D6FD00AC0889 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				CD11E91C21F3D75700AC0889 /* PockemonActions.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		CD11E92121F3D9F500AC0889 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CDF172B021EA31B20020E7AA /* ARViewController.swift */,
+				CD0B4AA121EAA9C40057B884 /* ARViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CD11E92321F3DF6B00AC0889 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CD11E92421F3DF7C00AC0889 /* SCNVector3+Identifier.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		CDF172A021EA31B20020E7AA = {
@@ -241,9 +215,8 @@
 		CDF172AB21EA31B20020E7AA /* ARKitDemo */ = {
 			isa = PBXGroup;
 			children = (
-				CD0B4AA821EAAADE0057B884 /* AR */,
-				CD0B4A9321EA9E770057B884 /* ARFlow */,
-				CD0B4AA621EAAAAD0057B884 /* Core */,
+				CD11E92321F3DF6B00AC0889 /* Extensions */,
+				CD11E92121F3D9F500AC0889 /* ViewControllers */,
 				CD0B4AA721EAAAC40057B884 /* Supporting Files */,
 			);
 			path = ARKitDemo;
@@ -436,9 +409,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD0B4A9F21EAA3040057B884 /* ErrorState.swift in Sources */,
+				CD11E91D21F3D75700AC0889 /* PockemonActions.swift in Sources */,
+				CD11E91A21F3D60E00AC0889 /* AppReducer.swift in Sources */,
+				CD11E92021F3D9BB00AC0889 /* PockemonState.swift in Sources */,
 				CD0B4A9221EA973C0057B884 /* AppState.swift in Sources */,
-				CD0B4A9C21EAA0890057B884 /* PockemonState.swift in Sources */,
+				CD11E91721F3D5EF00AC0889 /* PockemonReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,11 +422,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDF172B121EA31B20020E7AA /* ARViewController.swift in Sources */,
-				CD0B4A9521EA9E890057B884 /* PockemonLens.swift in Sources */,
 				CDF172AD21EA31B20020E7AA /* AppDelegate.swift in Sources */,
-				CD0B4AA521EAAA720057B884 /* ErrorHandlerController.swift in Sources */,
-				CD0B4A9921EA9FD10057B884 /* ViewControllerModel.swift in Sources */,
-				CD0B4A9721EA9F330057B884 /* Lens.swift in Sources */,
+				CD11E92521F3DF7C00AC0889 /* SCNVector3+Identifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
