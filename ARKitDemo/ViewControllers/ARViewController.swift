@@ -23,7 +23,7 @@ class ARViewController: UIViewController {
         sceneView.antialiasingMode = .multisampling4X
         sceneView.autoenablesDefaultLighting = true
         sceneView.automaticallyUpdatesLighting = true
-        sceneView.debugOptions = [.showFeaturePoints]
+        sceneView.debugOptions = [.showFeaturePoints, .showBoundingBoxes]
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(onPressAction(withGestureRecognizer:)))
         sceneView.addGestureRecognizer(tapGestureRecognizer)
@@ -48,35 +48,35 @@ class ARViewController: UIViewController {
     
     @objc private func onPressAction(withGestureRecognizer recognizer: UIGestureRecognizer) {
         let location = recognizer.location(in: sceneView)
-        mainStore.dispatch(tappedLocation(point: location))
+        let hitResults = sceneView.hitTest(location, options: [.boundingBoxOnly: true])
+        let identifier = hitResults.first?.node.parent?.name
+        
+        mainStore.dispatch(tappedLocation(point: location, identifier: identifier))
     }
     
     @IBAction func addButtonPressed(_ sender: UIButton) {
         mainStore.dispatch(showPockemonsSheet())
     }
     
-    private func hitTest(location: CGPoint, identifier: String) -> SCNNode? {
-        let hitResults = sceneView.hitTest(location, options: [SCNHitTestOption.boundingBoxOnly: true])
+    private func hitTest(location: CGPoint, identifier: String?) -> SCNNode? {
+        let hitResults = sceneView.hitTest(location, options: [.boundingBoxOnly: true])
         let node = hitResults.first?.node
         
-        return getParent(node, identifier: identifier)
+        if let identifier = identifier {
+            return getParent(node, identifier: identifier)
+            
+        } else {
+            return hitResults.first?.node.parent
+        }
     }
     
     private func addNode(location: CGPoint, type: PockemonType) {
-        let hitTestResults = sceneView.hitTest(location, types: .existingPlaneUsingExtent)
+        let hitTestResults = sceneView.hitTest(location, types: .estimatedHorizontalPlane)
 
         guard let hitTestResult = hitTestResults.first else { return }
-        let translation = hitTestResult.worldTransform.columns.3
-
-        guard let modelScene = SCNScene(named: "art.scnassets/\(type.rawValue).DAE") else { return }
-        let modelNode = modelScene.rootNode
-
-        modelNode.position = SCNVector3(translation.x, translation.y, translation.z)
-        modelNode.name = type.rawValue + modelNode.position.identifier
-        sceneView.scene.rootNode.addChildNode(modelNode)
         
-        guard let name = modelNode.name else { return }
-        mainStore.dispatch(setPockemon(identifier: name))
+        let anchor = ARAnchor(name: type.rawValue, transform: hitTestResult.worldTransform)
+        sceneView.session.add(anchor: anchor)
     }
     
     private func deleteNode(location: CGPoint, identifier: String) {
@@ -124,7 +124,18 @@ class ARViewController: UIViewController {
 }
 
 // MARK: ARSCNViewDelegate
-extension ARViewController: ARSCNViewDelegate {}
+extension ARViewController: ARSCNViewDelegate {
+    
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        guard let modelName = anchor.name,
+            let modelScene = SCNScene(named: "art.scnassets/\(modelName).DAE") else { return }
+        
+        let modelNode = modelScene.rootNode
+        modelNode.name = anchor.identifier.uuidString
+        
+        node.addChildNode(modelNode)
+    }
+}
 
 //MARK: StoreSubscriber
 extension ARViewController: StoreSubscriber {
@@ -133,7 +144,7 @@ extension ARViewController: StoreSubscriber {
         
         guard let location = state.lastLocation else { return }
         
-        let identifier = state.lastIdentifier ?? ""
+        let identifier = state.lastIdentififer ?? ""
         let evolutionState = state.evolutionInfo[identifier] ?? .none
 
         switch evolutionState {

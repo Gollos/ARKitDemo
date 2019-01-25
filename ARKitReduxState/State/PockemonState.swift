@@ -26,7 +26,7 @@ public enum PockemonEvolution: Int {
 
 public struct PockemonState: StateType {
     public var lastLocation: CGPoint?
-    public var lastIdentifier: String?
+    public var lastIdentififer: String?
     public var selectedType: PockemonType?
     public var pockemonSheetTypes: [String]
     public var evolutionInfo: [String: PockemonEvolution]

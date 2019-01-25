@@ -18,7 +18,6 @@
 		CD11E91A21F3D60E00AC0889 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11E91921F3D60E00AC0889 /* AppReducer.swift */; };
 		CD11E91D21F3D75700AC0889 /* PockemonActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11E91C21F3D75700AC0889 /* PockemonActions.swift */; };
 		CD11E92021F3D9BB00AC0889 /* PockemonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11E91F21F3D9BB00AC0889 /* PockemonState.swift */; };
-		CD11E92521F3DF7C00AC0889 /* SCNVector3+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11E92421F3DF7C00AC0889 /* SCNVector3+Identifier.swift */; };
 		CDF172AD21EA31B20020E7AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF172AC21EA31B20020E7AA /* AppDelegate.swift */; };
 		CDF172AF21EA31B20020E7AA /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF172AE21EA31B20020E7AA /* art.scnassets */; };
 		CDF172B121EA31B20020E7AA /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF172B021EA31B20020E7AA /* ARViewController.swift */; };
@@ -66,7 +65,6 @@
 		CD11E91921F3D60E00AC0889 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		CD11E91C21F3D75700AC0889 /* PockemonActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PockemonActions.swift; sourceTree = "<group>"; };
 		CD11E91F21F3D9BB00AC0889 /* PockemonState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PockemonState.swift; sourceTree = "<group>"; };
-		CD11E92421F3DF7C00AC0889 /* SCNVector3+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Identifier.swift"; sourceTree = "<group>"; };
 		CDF172A921EA31B20020E7AA /* ARKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF172AC21EA31B20020E7AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDF172AE21EA31B20020E7AA /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -184,14 +182,6 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		CD11E92321F3DF6B00AC0889 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				CD11E92421F3DF7C00AC0889 /* SCNVector3+Identifier.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		CDF172A021EA31B20020E7AA = {
 			isa = PBXGroup;
 			children = (
@@ -215,7 +205,6 @@
 		CDF172AB21EA31B20020E7AA /* ARKitDemo */ = {
 			isa = PBXGroup;
 			children = (
-				CD11E92321F3DF6B00AC0889 /* Extensions */,
 				CD11E92121F3D9F500AC0889 /* ViewControllers */,
 				CD0B4AA721EAAAC40057B884 /* Supporting Files */,
 			);
@@ -423,7 +412,6 @@
 			files = (
 				CDF172B121EA31B20020E7AA /* ARViewController.swift in Sources */,
 				CDF172AD21EA31B20020E7AA /* AppDelegate.swift in Sources */,
-				CD11E92521F3DF7C00AC0889 /* SCNVector3+Identifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
