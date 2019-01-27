@@ -49,7 +49,7 @@ class ARViewController: UIViewController {
     @objc private func onPressAction(withGestureRecognizer recognizer: UIGestureRecognizer) {
         let location = recognizer.location(in: sceneView)
         let hitResults = sceneView.hitTest(location, options: [.boundingBoxOnly: true])
-        let identifier = hitResults.first?.node.parent?.name
+        let identifier = hitResults.first?.node.name
         
         mainStore.dispatch(tappedLocation(point: location, identifier: identifier))
     }
@@ -60,14 +60,9 @@ class ARViewController: UIViewController {
     
     private func hitTest(location: CGPoint, identifier: String?) -> SCNNode? {
         let hitResults = sceneView.hitTest(location, options: [.boundingBoxOnly: true])
-        let node = hitResults.first?.node
+        let node = hitResults.first { $0.node.name == identifier }?.node
         
-        if let identifier = identifier {
-            return getParent(node, identifier: identifier)
-            
-        } else {
-            return hitResults.first?.node.parent
-        }
+        return node
     }
     
     private func addNode(location: CGPoint, type: PockemonType) {
@@ -128,11 +123,10 @@ extension ARViewController: ARSCNViewDelegate {
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         guard let modelName = anchor.name,
-            let modelScene = SCNScene(named: "art.scnassets/\(modelName).DAE") else { return }
+            let modelNode = SCNNode.create(with: modelName) else { return }
         
-        let modelNode = modelScene.rootNode
         modelNode.name = anchor.identifier.uuidString
-        
+        modelNode.simdTransform = anchor.transform
         node.addChildNode(modelNode)
     }
 }
